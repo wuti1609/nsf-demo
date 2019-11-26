@@ -1,14 +1,14 @@
 nsf:
   type: springboot2.1
   version: '2.0'
-  nsfServer: 'http://nsf-server.v190808.163skiff.com'
+  nsfServer: 'http://nsf-server.poc.qingzhou.com'
   application:
     name: stock-advisor
     version: 0.0.2
-    projectCode: wangbicheng
+    projectCode: poc
   authority:
-    accessKey: 081a63b82cb84dd481e689dbecbcba35
-    secretKey: 0a2f237e2ab44c84b50435db6164bdd4
+    accessKey: 5e6f91db58be400abfce01d17c6bacfa
+    secretKey: a91271e303524869bec36a6084865afb
   manager:
     patterns: []
   relations:
