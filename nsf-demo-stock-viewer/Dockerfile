@@ -18,7 +18,7 @@ RUN mkdir -p /opt/apm && cd /opt/apm && \
     echo "service=stock-viewer" >> napm-agent.properties
 
 #add run command
-ADD run.sh  /opt/nsf/
+ADD ./nsf-demo-stock-viewer/run.sh  /opt/nsf/
 RUN chmod a+x /opt/nsf/run.sh
 
 CMD ["/opt/nsf/run.sh"]
