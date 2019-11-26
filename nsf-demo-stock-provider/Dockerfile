@@ -1,12 +1,12 @@
 FROM tomcat:7.0.77-jre8
 
 #add application jar
-ADD target/*.jar /opt/nsf/
+ADD ./nsf-demo-stock-provider/target/*.jar /opt/nsf/
 
 #add nsf agent jar and config file
 RUN mkdir -p /opt/nsf && cd /opt/nsf && \
     wget "http://console.poc.qingzhou.com/download/nsf-agent-v2.5.6-1daf42fe-20190916-162559.jar" -O nsf-agent.jar
-ADD nsf.yml /opt/nsf/nsf.yml
+ADD ./nsf-demo-stock-provider/nsf.yml /opt/nsf/nsf.yml
 
 #add apm agent jar and config file
 RUN mkdir -p /opt/apm && cd /opt/apm && \
@@ -18,7 +18,7 @@ RUN mkdir -p /opt/apm && cd /opt/apm && \
     echo "service=stock-provider" >> napm-agent.properties
 
 #add run command
-ADD run.sh  /opt/nsf/
+ADD ./nsf-demo-stock-provider/run.sh  /opt/nsf/
 RUN chmod a+x /opt/nsf/run.sh
 
 CMD ["/opt/nsf/run.sh"]
