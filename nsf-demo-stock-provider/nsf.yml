@@ -4,7 +4,7 @@ nsf:
   nsfServer: 'http://nsf-server.poc.qingzhou.com'
   application:
     name: stock-provider
-    version: 0.0.1
+    version: 0.0.2
     projectCode: poc
   authority:
     accessKey: 5e6f91db58be400abfce01d17c6bacfa
